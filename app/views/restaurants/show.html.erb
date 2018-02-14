@@ -21,11 +21,12 @@
 </p>
 
 <%= link_to 'Back', restaurants_path %> |
-
+<%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %> |
 <hr>
 
 <ul>
   <% @restaurant.reviews.each do |review| %>
   <li><%= review.content %></li>
+  <li><%= review.rating %></li>
   <% end %>
 </ul>
