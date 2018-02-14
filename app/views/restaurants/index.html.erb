@@ -1,8 +1,9 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Restaurants</h1>
 
-<table>
+<table class='table table-over'>
   <thead>
     <tr>
       <th>Name</th>
@@ -12,14 +13,18 @@
 
   <tbody>
     <% @restaurants.each do |restaurant| %>
+    <div class='table-line'>
       <tr>
         <td><%= restaurant.name %></td>
-        <td><%= link_to 'Show', restaurant %></td>
+        <td><%= link_to 'Show', restaurant, class: "btn btn-primary" %></td>
       </tr>
+    </div>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-primary"%>
+
+</div>
